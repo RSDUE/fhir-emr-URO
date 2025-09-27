@@ -1,12 +1,13 @@
 import { PlusOutlined } from '@ant-design/icons';
 import { t, Trans } from '@lingui/macro';
-import { Button, notification } from 'antd';
+import { notification } from 'antd';
 
 import { questionnaireIdLoader } from 'src/hooks/questionnaire-response-form-data';
 import { selectCurrentUserRoleResource } from 'src/utils/role';
 
 import { ModalTrigger } from '../ModalTrigger';
 import { QuestionnaireResponseForm } from '../QuestionnaireResponseForm';
+import { Custom } from 'src/styles/styles.style';
 
 interface ModalNewHealthcareServiceProps {
     onCreate: () => void;
@@ -17,11 +18,11 @@ export const ModalNewHealthcareService = (props: ModalNewHealthcareServiceProps)
         <ModalTrigger
             title={t`Add Healthcare Service`}
             trigger={
-                <Button icon={<PlusOutlined />} type="primary">
+                <Custom.ButtonMD icon={<PlusOutlined />} type="primary">
                     <span>
                         <Trans>Add healthcare service</Trans>
                     </span>
-                </Button>
+                </Custom.ButtonMD>
             }
         >
             {({ closeModal }) => (

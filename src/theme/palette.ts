@@ -8,7 +8,7 @@ export const brandColors: Pick<DefaultTheme, 'primary' | 'secondary'> = {
 };
 
 const fcColors: Pick<DefaultTheme, 'link' | 'success' | 'warning' | 'error'> = {
-    link: brandColors.primary,
+    link: brandColors.secondary,
     success: '#52C41A',
     warning: '#FAAD14',
     error: '#FF4D4F',

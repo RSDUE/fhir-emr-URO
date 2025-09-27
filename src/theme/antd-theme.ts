@@ -12,8 +12,8 @@ export function getANTDTheme({ dark }: { dark?: boolean }): ThemeConfig {
         token: {
             colorPrimary: colors.primary,
             colorLink: palette.link,
-            colorLinkHover: palette.primaryPalette.bcp_5,
-            colorLinkActive: palette.primaryPalette.bcp_7,
+            colorLinkHover: palette.secondaryPalette.bcs_9,
+            colorLinkActive: palette.secondaryPalette.bcs_4,
             colorError: palette.error,
             colorSuccess: palette.success,
             colorWarning: palette.warning,
@@ -31,9 +31,20 @@ export function getANTDTheme({ dark }: { dark?: boolean }): ThemeConfig {
             Layout: {
                 siderBg: palette.neutral.sidebarBackground,
                 colorBgBody: palette.neutralPalette.gray_2,
+                colorBgHeader: palette.neutral.sidebarBackground,
+            },
+            Tabs: {
+                itemActiveColor: '#23a292',
+                itemHoverColor: '#5BA694',
+                inkBarColor: '#23a292',
+                itemSelectedColor: '#23a292',
             },
             Result: {
                 colorSuccess: palette.secondary,
+            },
+            Menu: {
+                itemHoverColor: '#23a292', // color del texto al hover
+                itemHoverBg: 'transparent', // si no quieres que cambie el fondo
             },
         },
     };

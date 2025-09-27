@@ -116,27 +116,28 @@ export function questionnaireItemsToValidationSchema(
     if (questionnaireItems.length === 0) return yup.object(validationSchema) as yup.AnyObjectSchema;
     questionnaireItems.forEach((item) => {
         let schema: yup.AnySchema;
+        const fieldName = item.text ?? t`This field`;
 
         if (item.type === 'string' || item.type === 'text') {
             schema = yup.string();
             if (item.itemControl?.coding?.[0]?.code === 'email') schema = (schema as yup.StringSchema).email();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             if (item.maxLength && item.maxLength > 0) schema = (schema as yup.StringSchema).max(item.maxLength);
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
             schema = createSchemaArrayOfValues(yup.object({ string: schema }));
         } else if (item.type === 'integer') {
             schema = yup.number().integer();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
             schema = createSchemaArrayOfValues(yup.object({ integer: schema }));
         } else if (item.type === 'decimal') {
             schema = yup.number();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
             schema = createSchemaArrayOfValues(yup.object({ decimal: schema }));
         } else if (item.type === 'date') {
             schema = yup.date();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
             schema = createSchemaArrayOfValues(yup.object({ date: schema }));
         } else if (item.type === 'group' && item.item) {
@@ -149,11 +150,17 @@ export function questionnaireItemsToValidationSchema(
                 .required();
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
         } else {
-            schema = item.required ? yup.array().of(yup.mixed()).min(1).required() : yup.mixed().nullable();
+            schema = item.required
+                ? yup
+                      .array()
+                      .of(yup.mixed())
+                      .min(1)
+                      .required(t`${fieldName} is required`)
+                : yup.mixed().nullable();
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
         }
 
-        schema = item.required ? schema.required() : schema;
+        schema = item.required ? schema.required(t`${fieldName} is required`) : schema;
 
         if (item.enableWhen) {
             validationSchema[item.linkId] = getQuestionItemEnableWhenSchema({

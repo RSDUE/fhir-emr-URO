@@ -100,7 +100,7 @@ export function ChoiceQuestionValueSet(props: ChoiceQuestionValueSetProps) {
         value,
         onChange,
         repeats = false,
-        placeholder,
+        placeholder = t`Select...`,
         choiceColumn,
         preferredTerminologyServer,
     } = props;
