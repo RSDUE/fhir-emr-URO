@@ -24,7 +24,7 @@ msgstr ""
 #: src/utils/questionnaire.ts:158
 #: src/utils/questionnaire.ts:163
 msgid "{fieldName} is required"
-msgstr ""
+msgstr "{fieldName} es requerido"
 
 #: src/containers/PatientDetails/PatientOverviewDynamic/components/PatientNoteListCard/NoteList/index.tsx:55
 msgid "Action"
@@ -74,7 +74,7 @@ msgstr "Actividad"
 
 #: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
 msgid "Add {text}"
-msgstr ""
+msgstr "Agregar {text}"
 
 #: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
 msgid "Add another answer"
@@ -84,11 +84,11 @@ msgstr "Añadir otra respuesta"
 msgid "Add break"
 msgstr "Añadir pausa"
 
-#: src/components/ModalNewHealthcareService/index.tsx:22
+#: src/components/ModalNewHealthcareService/index.tsx:23
 msgid "Add healthcare service"
 msgstr "Añadir servicio de salud"
 
-#: src/components/ModalNewHealthcareService/index.tsx:18
+#: src/components/ModalNewHealthcareService/index.tsx:19
 msgid "Add Healthcare Service"
 msgstr "Añadir Servicio de Salud"
 
@@ -254,7 +254,7 @@ msgstr "por"
 msgid "Calories"
 msgstr "Calorías"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:82
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:140
 #: src/containers/DocumentsList/ChooseDocumentToCreateModal/index.tsx:56
 #: src/containers/InvoiceList/components/ModalCancelInvoice/index.tsx:18
 #: src/containers/Prescriptions/ModalMedicationRequestCancel.tsx:22
@@ -292,7 +292,7 @@ msgstr "Elegir género"
 
 #: src/containers/PatientDetails/new.tsx:55
 msgid "Choose status"
-msgstr ""
+msgstr "Seleccionar estado"
 
 #: src/components/SearchBar/index.tsx:38
 #: src/components/SearchBar/SearchBarMobile/index.tsx:52
@@ -386,7 +386,7 @@ msgstr "Crear documento"
 
 #: src/containers/PatientDetails/new.tsx:79
 msgid "Create encounter"
-msgstr ""
+msgstr "Crear encuentro"
 
 #: src/components/ModalNewEncounter/index.tsx:23
 #: src/components/ModalNewEncounter/index.tsx:25
@@ -666,7 +666,7 @@ msgstr "Filtros"
 
 #: src/containers/PatientDetails/new.tsx:48
 msgid "Find encounter"
-msgstr ""
+msgstr "Buscar encuentro"
 
 #: src/containers/PatientList/searchBarUtils.ts:10
 #: src/containers/PatientResourceListExample/index.tsx:75
@@ -679,7 +679,7 @@ msgstr "Buscar cuestionario"
 
 #: src/containers/PatientDetails/new.tsx:81
 msgid "Finish encounters"
-msgstr ""
+msgstr "Finalizar encuentro"
 
 #: src/containers/PractitionerDetails/PractitionerOverview/index.tsx:28
 msgid "First name"
@@ -721,7 +721,7 @@ msgstr "Ir al encuentro"
 #: src/components/BaseQuestionnaireResponseForm/widgets/Group/GroupCard/index.tsx:66
 #: src/components/BaseQuestionnaireResponseForm/widgets/Group/GroupCard/index.tsx:96
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: src/utils/__tests__/questionnaire/custom-validation.test.ts:16
 #: src/utils/__tests__/questionnaire/custom-validation.test.ts:27
@@ -738,7 +738,7 @@ msgstr ""
 msgid "Has at least one uppercase letter"
 msgstr ""
 
-#: src/components/ModalNewHealthcareService/index.tsx:38
+#: src/components/ModalNewHealthcareService/index.tsx:39
 msgid "Healthcare service successfully created"
 msgstr "Servicio de salud creado con éxito"
 
@@ -986,7 +986,7 @@ msgstr "Número (predeterminado)"
 
 #: src/containers/PatientDetails/new.tsx:84
 msgid "Number of Encounters"
-msgstr ""
+msgstr "N° de encuentros"
 
 #: src/containers/PatientResourceListExample/index.tsx:129
 msgid "Number of Patients"
@@ -1238,7 +1238,7 @@ msgstr "Fila"
 msgid "Saturday"
 msgstr "Sábado"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:110
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:168
 #: src/containers/EncounterDetails/AIScribe/index.tsx:206
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/index.tsx:130
 #: src/containers/QuestionnaireBuilder/QuestionnaireSaveForm/index.tsx:98
@@ -1247,7 +1247,8 @@ msgstr "Sábado"
 msgid "Save"
 msgstr "Guardar"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:163
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:91
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:216
 msgid "Save as draft"
 msgstr "Guardar borrador"
 
@@ -1256,11 +1257,13 @@ msgstr "Guardar borrador"
 msgid "Save questionnaire"
 msgstr "Guardar cuestionario"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:180
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:108
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:233
 msgid "Saved as draft"
 msgstr "Guardado como borrador"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:171
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:99
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:224
 msgid "Saving draft"
 msgstr "Guardando borrador"
 
@@ -1309,6 +1312,10 @@ msgstr "Ver todo"
 msgid "See ValueSet details"
 msgstr "Ver detalles de ValueSet"
 
+#: src/components/BaseQuestionnaireResponseForm/widgets/reference.tsx:174
+msgid "Select"
+msgstr "Seleccionar..."
+
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:38
 msgid "Select (default)"
 msgstr "Seleccionar (predeterminado)"
@@ -1328,6 +1335,7 @@ msgstr "Selecciona hora"
 #: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:25
 #: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:54
 #: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:103
+#: src/components/SearchBar/SearchBarColumn/ChoiceColumn/SelectChoiceColumn/index.tsx:10
 msgid "Select..."
 msgstr "Seleccionar..."
 
@@ -1539,7 +1547,7 @@ msgstr "Este audio no se puede reproducir en Safari, por favor descarga el audio
 
 #: src/utils/questionnaire.ts:119
 msgid "This field"
-msgstr ""
+msgstr "Este campo"
 
 #: src/containers/Scheduling/available-time.ts:16
 msgid "Thursday"

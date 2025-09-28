@@ -84,11 +84,11 @@ msgstr ""
 msgid "Add break"
 msgstr ""
 
-#: src/components/ModalNewHealthcareService/index.tsx:22
+#: src/components/ModalNewHealthcareService/index.tsx:23
 msgid "Add healthcare service"
 msgstr ""
 
-#: src/components/ModalNewHealthcareService/index.tsx:18
+#: src/components/ModalNewHealthcareService/index.tsx:19
 msgid "Add Healthcare Service"
 msgstr ""
 
@@ -254,7 +254,7 @@ msgstr ""
 msgid "Calories"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:82
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:140
 #: src/containers/DocumentsList/ChooseDocumentToCreateModal/index.tsx:56
 #: src/containers/InvoiceList/components/ModalCancelInvoice/index.tsx:18
 #: src/containers/Prescriptions/ModalMedicationRequestCancel.tsx:22
@@ -742,7 +742,7 @@ msgstr ""
 msgid "Has at least one uppercase letter"
 msgstr ""
 
-#: src/components/ModalNewHealthcareService/index.tsx:38
+#: src/components/ModalNewHealthcareService/index.tsx:39
 msgid "Healthcare service successfully created"
 msgstr ""
 
@@ -1254,7 +1254,7 @@ msgstr ""
 msgid "Saturday"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:110
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:168
 #: src/containers/EncounterDetails/AIScribe/index.tsx:206
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/index.tsx:130
 #: src/containers/QuestionnaireBuilder/QuestionnaireSaveForm/index.tsx:98
@@ -1263,7 +1263,8 @@ msgstr ""
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:163
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:91
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:216
 msgid "Save as draft"
 msgstr ""
 
@@ -1272,11 +1273,13 @@ msgstr ""
 msgid "Save questionnaire"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:180
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:108
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:233
 msgid "Saved as draft"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:171
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:99
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:224
 msgid "Saving draft"
 msgstr ""
 
@@ -1329,6 +1332,10 @@ msgstr ""
 msgid "See ValueSet details"
 msgstr ""
 
+#: src/components/BaseQuestionnaireResponseForm/widgets/reference.tsx:174
+msgid "Select"
+msgstr ""
+
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:38
 msgid "Select (default)"
 msgstr ""
@@ -1348,6 +1355,7 @@ msgstr ""
 #: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:25
 #: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:54
 #: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:103
+#: src/components/SearchBar/SearchBarColumn/ChoiceColumn/SelectChoiceColumn/index.tsx:10
 msgid "Select..."
 msgstr ""
 
