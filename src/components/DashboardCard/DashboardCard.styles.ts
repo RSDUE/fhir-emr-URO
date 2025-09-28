@@ -6,13 +6,17 @@ export const S = {
     `,
     Card: styled.div`
         border-radius: 10px;
-        background-color: ${({ theme }) => theme.neutralPalette.gray_1};
+        background-color: ${({ theme }) => theme.neutralPalette.gray_2};
         color: ${({ theme }) => theme.neutralPalette.gray_13};
         border: 1px solid ${({ theme }) => theme.antdTheme?.colorBorderSecondary};
         min-width: fit-content;
 
         &._empty {
             color: ${({ theme }) => theme.neutralPalette.gray_6};
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
         }
     `,
     Header: styled.div`
