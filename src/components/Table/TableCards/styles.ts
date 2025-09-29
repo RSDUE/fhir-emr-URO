@@ -15,7 +15,7 @@ export const S = {
         padding: 16px;
         border: 1px solid ${({ theme }) => theme.neutralPalette.gray_4};
         border-radius: 6px;
-        background-color: ${({ theme }) => theme.neutralPalette.gray_1};
+        background-color: ${({ theme }) => theme.neutralPalette.gray_4};
     `,
     Columns: styled.div`
         flex: 1;
