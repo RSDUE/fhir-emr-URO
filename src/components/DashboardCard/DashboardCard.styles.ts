@@ -40,7 +40,7 @@ export const S = {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: ${({ theme }) => theme.primary};
+        background-color: #23a292;
         width: 48px;
         height: 48px;
         min-width: 48px;
@@ -49,7 +49,7 @@ export const S = {
         font-size: 24px;
 
         &._empty {
-            background-color: ${({ theme }) => theme.primaryPalette.bcp_2};
+            background-color: #c7fff9;
         }
     `,
     Content: styled.div`

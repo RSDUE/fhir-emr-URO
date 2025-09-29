@@ -1,11 +1,12 @@
 import { Trans } from '@lingui/macro';
-import { Button } from 'antd';
+import { Custom } from 'src/styles/styles.style';
 
 import { questionnaireIdLoader } from 'src/hooks/questionnaire-response-form-data';
 
 import { QuestionnairesWizardFooterProps, QuestionnairesWizardProps, useQuestionnairesWizard } from './hooks';
 import { S } from './QuestionnairesWizard.styles';
 import { QuestionnaireResponseForm } from '../QuestionnaireResponseForm';
+import { useIsMobile } from 'src/hooks/isMobile';
 
 export function QuestionnairesWizard(props: QuestionnairesWizardProps) {
     const { onSuccess, onStepSuccess, questionnaires, initialQuestionnaireResponse, FormFooterComponent, ...other } =
@@ -95,20 +96,54 @@ export function QuestionnairesWizardFooter(props: QuestionnairesWizardFooterProp
         finishButtonTitle,
     } = props;
 
+    const isMobile = useIsMobile();
+
+    // return (
+    //     <S.Footer>
+    //         {canGoBack ? (
+    //             <Button type="default" onClick={goBack}>
+    //                 {prevButtonTitle || <Trans>Go Back</Trans>}
+    //             </Button>
+    //         ) : (
+    //             <div />
+    //         )}
+    //         <Button type="primary" htmlType="submit" loading={submitting} disabled={submitDisabled}>
+    //             {canGoForward
+    //                 ? nextButtonTitle || <Trans>Go Forward</Trans>
+    //                 : finishButtonTitle || <Trans>Complete</Trans>}
+    //         </Button>
+    //     </S.Footer>
+    // );
+
     return (
         <S.Footer>
-            {canGoBack ? (
-                <Button type="default" onClick={goBack}>
-                    {prevButtonTitle || <Trans>Go Back</Trans>}
-                </Button>
-            ) : (
-                <div />
-            )}
-            <Button type="primary" htmlType="submit" loading={submitting} disabled={submitDisabled}>
-                {canGoForward
-                    ? nextButtonTitle || <Trans>Go Forward</Trans>
-                    : finishButtonTitle || <Trans>Complete</Trans>}
-            </Button>
+            {(() => {
+                const BackButtonComponent = isMobile ? Custom.ButtonOutlineLG2 : Custom.ButtonOutlineLG;
+
+                const NextButtonComponent = isMobile ? Custom.ButtonLG2 : Custom.ButtonLG;
+
+                return (
+                    <>
+                        {canGoBack ? (
+                            <BackButtonComponent type="default" onClick={goBack}>
+                                {prevButtonTitle || <Trans>Go Back</Trans>}
+                            </BackButtonComponent>
+                        ) : (
+                            <div />
+                        )}
+                        <NextButtonComponent
+                            type="primary"
+                            htmlType="submit"
+                            loading={submitting}
+                            disabled={submitDisabled}
+                        >
+                            {canGoForward
+                                ? nextButtonTitle || <Trans>Go Forward</Trans>
+                                : finishButtonTitle || <Trans>Complete</Trans>}
+                        </NextButtonComponent>
+                    </>
+                );
+            })()}
         </S.Footer>
     );
 }

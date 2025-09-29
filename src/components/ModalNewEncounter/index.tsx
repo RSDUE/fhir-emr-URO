@@ -7,6 +7,7 @@ import { useMemo, useState } from 'react';
 import { Modal } from 'src/components/Modal';
 import { QuestionnaireResponseForm } from 'src/components/QuestionnaireResponseForm';
 import { questionnaireIdLoader } from 'src/hooks/questionnaire-response-form-data';
+import { Custom } from 'src/styles/styles.style';
 import { Role, matchCurrentUserRole } from 'src/utils/role';
 
 export interface ModalNewEncounterProps {
@@ -42,9 +43,9 @@ export const ModalNewEncounter = ({ patient, launchContextParameters, reloadEnco
 
     return (
         <>
-            <Button icon={<PlusOutlined />} type="primary" onClick={showModal}>
+            <Custom.ButtonMD icon={<PlusOutlined />} type="primary" onClick={showModal}>
                 <span>{title}</span>
-            </Button>
+            </Custom.ButtonMD>
             <Modal
                 title={title}
                 open={isModalVisible}

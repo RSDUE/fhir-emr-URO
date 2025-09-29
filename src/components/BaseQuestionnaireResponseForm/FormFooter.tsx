@@ -151,7 +151,7 @@ export function FormFooter(props: Props) {
                         if (!isMobile) {
                             ButtonComponent = isCancel ? Custom.ButtonRed : Custom.Button;
                         } else {
-                            ButtonComponent = isCancel ? Custom.ButtonRed2 : Custom.Button2;
+                            ButtonComponent = isCancel ? Custom.ButtonRed2 : Custom.ButtonSM;
                         }
 
                         const IconComponent = isCancel ? <CloseCircleOutlined /> : <CheckCircleOutlined />;

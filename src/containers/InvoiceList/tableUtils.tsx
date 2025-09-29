@@ -6,7 +6,7 @@ import {
     ExclamationCircleOutlined,
 } from '@ant-design/icons';
 import { t, Trans } from '@lingui/macro';
-import { Tag, Button } from 'antd';
+import { Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { Invoice, Patient, Practitioner, PractitionerRole } from 'fhir/r4b';
 import _ from 'lodash';
@@ -21,6 +21,7 @@ import { ModalCancelInvoice } from './components/ModalCancelInvoice';
 import { ModalPayInvoice } from './components/ModalPayInvoice';
 import { InvoiceActionsProps } from './types';
 import { getPractitionerName, getInvoicePractitioner, getPatientName, getInvoicePatient, formatMoney } from './utils';
+import { Custom } from 'src/styles/styles.style';
 
 export function getInvoiceStatusHumanized(invoice?: Invoice) {
     const invoiceStatusMapping = {
@@ -78,9 +79,9 @@ export function InvoiceActions(props: InvoiceActionsProps) {
     const navigate = useNavigate();
     const routeToOpen = `${location.pathname}/${invoice.id}`;
     const openDetailsButton = (
-        <Button key={`open-invoice-${invoice.id}`} onClick={() => navigate(routeToOpen)} type="link">
+        <Custom.Button key={`open-invoice-${invoice.id}`} onClick={() => navigate(routeToOpen)} type="link">
             <Trans>Open</Trans>
-        </Button>
+        </Custom.Button>
     );
 
     if (simplified) {
