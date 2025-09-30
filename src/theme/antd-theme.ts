@@ -30,6 +30,7 @@ export function getANTDTheme({ dark }: { dark?: boolean }): ThemeConfig {
             },
             Layout: {
                 siderBg: palette.neutral.sidebarBackground,
+                bodyBg: palette.neutralPalette.gray_2,
                 colorBgBody: palette.neutralPalette.gray_2,
                 colorBgHeader: palette.neutral.sidebarBackground,
             },

@@ -244,6 +244,36 @@ export const Custom = {
             border: 1px solid #51f7ed;
         }
     `,
+    ButtonAuto: styled(Button)`
+        flex: 1;
+        background-color: #057e80;
+        color: #effefc;
+        box-shadow: none;
+        width: auto;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 6px 8px;
+        border-radius: 16px;
+        gap: 10px;
+        text-wrap: wrap;
+
+        &:not(:disabled):not(.ant-btn-disabled):hover {
+            background-color: #002f33;
+            color: #effefc;
+            border: none;
+        }
+        &:disabled,
+        &.ant-btn-disabled {
+            background-color: #c7fff9;
+            color: #057e80;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: 1px solid #51f7ed;
+        }
+    `,
     ButtonOutline: styled(Button)`
         flex: 1;
         background-color: #f0f7fe;
