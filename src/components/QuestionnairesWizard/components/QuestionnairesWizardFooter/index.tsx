@@ -41,9 +41,7 @@ export function QuestionnairesWizardFooter(props: QuestionnairesWizardFooterProp
                         submitDisabled={submitDisabled}
                         onCancel={onCancel}
                         formData={baseQRFPropsContext.formData}
-                        saveButtonTitle={
-                            canComplete ? finishButtonTitle || t`Complete` : nextButtonTitle || t`Submit and Go Forward`
-                        }
+                        saveButtonTitle={canComplete ? finishButtonTitle || t`Save` : nextButtonTitle || t`Continue`}
                     />
                 )}
             </S.Footer>

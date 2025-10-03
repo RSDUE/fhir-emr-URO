@@ -104,7 +104,7 @@ const getStepBackgroundColorActive = (theme: DefaultTheme, status?: 'finish' | '
         case 'finish':
             return theme.secondaryPalette.bcs_6;
         case 'process':
-            return theme.primaryPalette.bcp_6;
+            return '#203767';
         case 'wait':
             return theme.primaryPalette.bcp_1;
         case 'error':
@@ -134,7 +134,7 @@ const getStepBorderColorActive = (theme: DefaultTheme, status?: 'finish' | 'proc
         case 'finish':
             return theme.secondaryPalette.bcs_6;
         case 'process':
-            return theme.primaryPalette.bcp_6;
+            return '#203767';
         case 'wait':
             return theme.primaryPalette.bcp_1;
         case 'error':
@@ -149,7 +149,7 @@ const getStepIconColorInactive = (theme: DefaultTheme, status?: 'finish' | 'proc
         case 'finish':
             return theme.neutralPalette.gray_1;
         case 'process':
-            return theme.neutralPalette.gray_1;
+            return theme.neutralPalette.gray_13;
         case 'wait':
             return theme.neutralPalette.gray_13;
         case 'error':

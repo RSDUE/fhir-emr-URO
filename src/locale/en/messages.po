@@ -258,7 +258,7 @@ msgstr ""
 msgid "Calories"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:140
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:307
 #: src/containers/DocumentsList/ChooseDocumentToCreateModal/index.tsx:56
 #: src/containers/InvoiceList/components/ModalCancelInvoice/index.tsx:18
 #: src/containers/Prescriptions/ModalMedicationRequestCancel.tsx:22
@@ -329,8 +329,8 @@ msgid "Col (default)"
 msgstr ""
 
 #: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:45
-msgid "Complete"
-msgstr ""
+#~ msgid "Complete"
+#~ msgstr ""
 
 #: src/containers/EncounterDetails/index.tsx:174
 #: src/containers/EncounterDetails/index.tsx:178
@@ -377,6 +377,10 @@ msgstr ""
 
 #: src/containers/PatientDetails/PatientWearables/index.tsx:89
 msgid "Contact the patient to obtain their consent for accessing activity data"
+msgstr ""
+
+#: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:44
+msgid "Continue"
 msgstr ""
 
 #: src/containers/MedicationManagement/index.tsx:62
@@ -1297,7 +1301,8 @@ msgstr ""
 msgid "Saturday"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:168
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:335
+#: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:44
 #: src/containers/EncounterDetails/AIScribe/index.tsx:206
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/index.tsx:130
 #: src/containers/QuestionnaireBuilder/QuestionnaireSaveForm/index.tsx:98
@@ -1308,23 +1313,27 @@ msgstr ""
 
 #: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:91
 #: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:216
-msgid "Save as draft"
-msgstr ""
+#~ msgid "Save as draft"
+#~ msgstr ""
 
 #: src/containers/QuestionnaireBuilder/index.tsx:49
 #: src/containers/QuestionnaireBuilder/index.tsx:50
 msgid "Save questionnaire"
 msgstr ""
 
+#: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:44
+#~ msgid "Saved"
+#~ msgstr ""
+
 #: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:108
 #: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:233
-msgid "Saved as draft"
-msgstr ""
+#~ msgid "Saved as draft"
+#~ msgstr ""
 
 #: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:99
 #: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:224
-msgid "Saving draft"
-msgstr ""
+#~ msgid "Saving draft"
+#~ msgstr ""
 
 #: src/containers/Scheduling/ScheduleCalendar/index.tsx:41
 msgid "Schedule calendar"
@@ -1531,8 +1540,8 @@ msgid "Submit"
 msgstr ""
 
 #: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:45
-msgid "Submit and Go Forward"
-msgstr ""
+#~ msgid "Submit and Go Forward"
+#~ msgstr ""
 
 #: src/uberComponents/ResourceListPage/actions.tsx:78
 #: src/uberComponents/ResourceListPage/actions.tsx:105

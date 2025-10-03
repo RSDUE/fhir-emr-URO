@@ -316,7 +316,7 @@ export function FormFooter(props: Props) {
                         let ButtonComponent: React.ElementType;
 
                         if (!isMobile) {
-                            ButtonComponent = isCancel ? Custom.ButtonRed : Custom.ButtonLG;
+                            ButtonComponent = isCancel ? Custom.ButtonRed : Custom.Button;
                         } else {
                             ButtonComponent = isCancel ? Custom.ButtonRed2 : Custom.Button2;
                         }
