@@ -6,13 +6,17 @@ export const S = {
     `,
     Card: styled.div`
         border-radius: 10px;
-        background-color: ${({ theme }) => theme.neutralPalette.gray_1};
+        background-color: ${({ theme }) => theme.neutralPalette.gray_2};
         color: ${({ theme }) => theme.neutralPalette.gray_13};
         border: 1px solid ${({ theme }) => theme.antdTheme?.colorBorderSecondary};
         min-width: fit-content;
 
         &._empty {
             color: ${({ theme }) => theme.neutralPalette.gray_6};
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
         }
     `,
     Header: styled.div`
@@ -36,7 +40,7 @@ export const S = {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: ${({ theme }) => theme.primary};
+        background-color: #23a292;
         width: 48px;
         height: 48px;
         min-width: 48px;
@@ -45,7 +49,7 @@ export const S = {
         font-size: 24px;
 
         &._empty {
-            background-color: ${({ theme }) => theme.primaryPalette.bcp_2};
+            background-color: #c7fff9;
         }
     `,
     Content: styled.div`

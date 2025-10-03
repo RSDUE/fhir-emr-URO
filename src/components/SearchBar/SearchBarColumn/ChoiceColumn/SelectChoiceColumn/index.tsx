@@ -3,10 +3,11 @@ import { ValueSetOption } from 'src/services';
 
 import { SearchBarColumnChoiceTypeProps } from '../../types';
 import { useChoiceColumn } from '../hooks';
+import { t } from '@lingui/macro';
 
 export function SelectChoiceColumn(props: SearchBarColumnChoiceTypeProps) {
     const { columnFilterValue, defaultOpen } = props;
-    const { options, placeholder, repeats } = columnFilterValue.column;
+    const { options, placeholder = t`Select...`, repeats } = columnFilterValue.column;
 
     const { onSelect, getOptionLabel, isOptionSelected } = useChoiceColumn(props);
 

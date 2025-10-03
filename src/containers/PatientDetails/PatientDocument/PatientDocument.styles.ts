@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const PATIENT_DOCUMENT_PADDING = 32;
+
 export const S = {
     Content: styled.div`
         width: 760px;
