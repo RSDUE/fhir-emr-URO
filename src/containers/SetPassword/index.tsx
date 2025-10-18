@@ -18,7 +18,7 @@ export function SetPassword(props: SetPasswordProps) {
     return (
         <S.Container>
             <S.Form>
-                <Title level={4} style={{ textAlign: 'center', marginBottom: 32 }}>
+                <Title level={4} style={{ textAlign: 'center', marginBottom: 32, color: '#FFF' }}>
                     <Trans>Set password</Trans>
                 </Title>
                 <QuestionnaireResponseForm

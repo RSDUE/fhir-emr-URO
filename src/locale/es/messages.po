@@ -90,11 +90,11 @@ msgstr "Añadir pausa"
 
 #: src/components/ModalNewHealthcareService/index.tsx:23
 msgid "Add healthcare service"
-msgstr "Añadir servicio de salud"
+msgstr "Añadir prestación de salud"
 
 #: src/components/ModalNewHealthcareService/index.tsx:19
 msgid "Add Healthcare Service"
-msgstr "Añadir Servicio de Salud"
+msgstr "Añadir Prestación de Salud"
 
 #: src/containers/MedicationManagement/ModalNewMedicationKnowledge.tsx:15
 #: src/containers/MedicationManagement/ModalNewMedicationKnowledge.tsx:19
@@ -761,16 +761,16 @@ msgstr ""
 
 #: src/components/ModalNewHealthcareService/index.tsx:39
 msgid "Healthcare service successfully created"
-msgstr "Servicio de salud creado con éxito"
+msgstr "Prestación de salud creada con éxito"
 
 #: src/components/ModalChangeActiveHealthcareService/index.tsx:36
 #: src/components/ModalEditHealthcareService/index.tsx:34
 msgid "Healthcare service successfully updated"
-msgstr "Servicio de salud actualizado con éxito"
+msgstr "Prestación de salud actualizada con éxito"
 
 #: src/containers/HealthcareServiceList/index.tsx:29
 msgid "Healthcare Services"
-msgstr "Servicios de Salud"
+msgstr "Prestaciones de Salud"
 
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:141
 msgid "Help text"
