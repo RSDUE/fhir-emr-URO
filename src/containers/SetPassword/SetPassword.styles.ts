@@ -4,6 +4,7 @@ export const S = {
     Container: styled.div`
         min-height: 100vh;
         background-color: ${({ theme }) => theme.primaryPalette.bcp_1};
+        color: #fff;
         display: flex;
         justify-content: center;
         padding: 10px;

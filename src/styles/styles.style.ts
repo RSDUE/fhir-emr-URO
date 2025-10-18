@@ -639,6 +639,37 @@ export const Custom = {
             border: none;
         }
     `,
+    ButtonSM2: styled(Button)`
+        flex: 1;
+        background-color: #057e80;
+        color: #effefc;
+        box-shadow: none;
+        width: auto;
+        min-width: 75px;
+        max-width: 170px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 8px;
+        border-radius: 16px;
+        gap: 10px;
+
+        &:not(:disabled):not(.ant-btn-disabled):hover {
+            background-color: #002f33;
+            color: #effefc;
+            border: none;
+        }
+        &:disabled,
+        &.ant-btn-disabled {
+            background-color: #c7fff9;
+            color: #057e80;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: 1px solid #51f7ed;
+        }
+    `,
     ButtonMD: styled(Button)`
         flex: 1;
         background-color: #057e80;
