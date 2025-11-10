@@ -1,5 +1,4 @@
 import { Trans } from '@lingui/macro';
-import { Button } from 'antd';
 import { useMemo } from 'react';
 
 import { SearchBarColumn } from './SearchBarColumn';
@@ -7,6 +6,7 @@ import { SearchBarMobile } from './SearchBarMobile';
 import { S } from './styles';
 import { SearchBarData } from './types';
 import { isSearchBarFilter } from './utils';
+import { Custom } from 'src/styles/styles.style';
 
 interface SearchBarProps extends SearchBarData {
     showInDrawerOnMobile?: boolean;
@@ -34,9 +34,9 @@ export function SearchBar(props: SearchBarProps) {
                 </S.LeftColumn>
 
                 {searchBarFilterValues.length > 1 ? (
-                    <Button onClick={onResetFilters}>
-                        <Trans>Clear filters</Trans>
-                    </Button>
+                    <Custom.ButtonOutline onClick={onResetFilters}>
+                        <Trans>Reset</Trans>
+                    </Custom.ButtonOutline>
                 ) : null}
             </S.SearchBar>
             <S.MobileFilters $showInDrawerOnMobile={showInDrawerOnMobile} $level={level}>

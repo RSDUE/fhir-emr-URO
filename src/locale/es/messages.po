@@ -258,7 +258,7 @@ msgstr "por"
 msgid "Calories"
 msgstr "Calorías"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:307
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:65
 #: src/containers/DocumentsList/ChooseDocumentToCreateModal/index.tsx:56
 #: src/containers/InvoiceList/components/ModalCancelInvoice/index.tsx:18
 #: src/containers/Prescriptions/ModalMedicationRequestCancel.tsx:22
@@ -302,7 +302,6 @@ msgstr "Seleccionar estado"
 msgid "Clear draft from local storage and reset form"
 msgstr ""
 
-#: src/components/SearchBar/index.tsx:38
 #: src/components/SearchBar/SearchBarMobile/index.tsx:52
 msgid "Clear filters"
 msgstr "Limpiar filtros"
@@ -1236,6 +1235,7 @@ msgstr "Solicitante"
 msgid "Required"
 msgstr "Requerido"
 
+#: src/components/SearchBar/index.tsx:38
 #: src/containers/InvoiceList/components/InvoiceListSearchBar/index.tsx:54
 #: src/containers/MedicationManagement/components/MedicationsSearchBar/index.tsx:32
 #: src/containers/OrganizationScheduling/index.tsx:85
@@ -1276,7 +1276,7 @@ msgstr "Fila"
 msgid "Saturday"
 msgstr "Sábado"
 
-#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:335
+#: src/components/BaseQuestionnaireResponseForm/FormFooter.tsx:97
 #: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:44
 #: src/containers/EncounterDetails/AIScribe/index.tsx:206
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/index.tsx:130
