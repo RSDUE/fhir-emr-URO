@@ -16,7 +16,7 @@ export const maxWidthStyles = css<{ $maxWidth?: number | string }>`
         }
 
         return css`
-            max-width: 1080px;
+            max-width: 1480px;
         `;
     }}
 `;
