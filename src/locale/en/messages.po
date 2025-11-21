@@ -327,9 +327,9 @@ msgstr ""
 msgid "Col (default)"
 msgstr ""
 
-#: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:45
-#~ msgid "Complete"
-#~ msgstr ""
+#: src/containers/PatientDetails/PatientDocument/index.tsx:61
+msgid "Complete"
+msgstr ""
 
 #: src/containers/EncounterDetails/index.tsx:174
 #: src/containers/EncounterDetails/index.tsx:178

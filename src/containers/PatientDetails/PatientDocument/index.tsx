@@ -14,6 +14,7 @@ import s from './PatientDocument.module.scss';
 import { S } from './PatientDocument.styles';
 import { PatientDocumentHeader } from './PatientDocumentHeader';
 import { usePatientDocument } from './usePatientDocument';
+import { t } from '@lingui/macro';
 
 export interface PatientDocumentProps {
     patient: Patient;
@@ -57,7 +58,7 @@ export function PatientDocument(props: PatientDocumentProps) {
                                             'depression-score': DepressionScore,
                                         }}
                                         onCancel={() => navigate(-1)}
-                                        saveButtonTitle={'Complete'}
+                                        saveButtonTitle={t`Complete`}
                                         autoSave={autosave !== undefined ? autosave : !provenance}
                                         qrDraftServiceType={qrDraftServiceType}
                                     />
