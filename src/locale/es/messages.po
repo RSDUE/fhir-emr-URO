@@ -327,6 +327,10 @@ msgstr "Código"
 msgid "Col (default)"
 msgstr "Columna (predeterminado)"
 
+#: src/containers/PatientDetails/PatientDocument/index.tsx:61
+msgid "Complete"
+msgstr "Completar"
+
 #: src/containers/EncounterDetails/index.tsx:174
 #: src/containers/EncounterDetails/index.tsx:178
 msgid "Complete encounter"
