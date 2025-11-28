@@ -19,14 +19,13 @@ msgstr ""
 
 #: src/components/QuestionnairesWizard/hooks.ts:168
 msgid "{0} was not submitted"
-msgstr ""
+msgstr "{0} no fue enviado"
 
 #: src/utils/questionnaire.ts:124
 #: src/utils/questionnaire.ts:130
 #: src/utils/questionnaire.ts:135
 #: src/utils/questionnaire.ts:140
-#: src/utils/questionnaire.ts:158
-#: src/utils/questionnaire.ts:163
+#: src/utils/questionnaire.ts:167
 msgid "{fieldName} is required"
 msgstr "{fieldName} es requerido"
 
@@ -300,7 +299,7 @@ msgstr "Seleccionar estado"
 
 #: src/components/QuestionnaireResponseFormDraft/index.tsx:35
 msgid "Clear draft from local storage and reset form"
-msgstr ""
+msgstr "Limpiar borrador del local storage y reestablecer formulario"
 
 #: src/components/SearchBar/SearchBarMobile/index.tsx:52
 msgid "Clear filters"
@@ -1253,19 +1252,19 @@ msgstr "Limpiar selección"
 
 #: src/hooks/questionnaire-response-form-data.ts:137
 #~ msgid "Resource id is not defined"
-#~ msgstr ""
+#~ msgstr "Recurso no definido"
 
 #: src/hooks/questionnaire-response-form-data.ts:146
 #: src/hooks/questionnaire-response-form-data.ts:154
 #: src/hooks/questionnaire-response-form-data.ts:167
 #: src/hooks/questionnaire-response-form-data.ts:175
 #~ msgid "Resource id is not provided"
-#~ msgstr ""
+#~ msgstr "ID de recurso no ingresado"
 
 #: src/components/QuestionnaireResponseForm/utils.tsx:67
 #: src/hooks/useQuestionnaireResponseDraft.ts:262
 msgid "Resource id not provided"
-msgstr ""
+msgstr "ID de recurso no ingresado"
 
 #: src/containers/PatientDetails/PatientDetailsTabs/index.tsx:24
 #: src/containers/PatientDetails/PatientHeader/index.tsx:98
@@ -1363,9 +1362,22 @@ msgstr "Seleccionar..."
 msgid "Select (default)"
 msgstr "Seleccionar (predeterminado)"
 
+#: src/utils/questionnaire.ts:153
+msgid "Select {fieldName}"
+msgstr "Seleccione {fieldName}"
+
 #: src/uberComponents/ResourceListPage/BatchActions.tsx:69
 msgid "Select all"
 msgstr "Seleccionar todos"
+
+#: src/utils/questionnaire.ts:150
+msgid "Select at least one {0}"
+msgstr "Seleccione al menos 1 {0}"
+
+#: src/utils/questionnaire.ts:153
+#: src/utils/questionnaire.ts:160
+msgid "Select at least one {fieldName}"
+msgstr "Seleccione al menos un {fieldName}"
 
 #: src/components/BaseQuestionnaireResponseForm/widgets/QuestionDateTime.stories.tsx:23
 msgid "Select date"
