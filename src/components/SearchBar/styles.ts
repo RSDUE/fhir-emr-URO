@@ -15,7 +15,7 @@ export const S = {
         .ant-input-search,
         .ant-picker,
         .react-select__control {
-            width: 270px;
+            width: 331px;
         }
 
         ${({ $showInDrawerOnMobile }) =>
