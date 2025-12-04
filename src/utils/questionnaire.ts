@@ -147,15 +147,19 @@ export function questionnaireItemsToValidationSchema(
                         ? yup.array().of(questionnaireItemsToValidationSchema(item.item, customYupTests))
                         : questionnaireItemsToValidationSchema(item.item, customYupTests),
                 })
-                .required();
+                .required(t`Select at least one ${fieldName.toLowerCase()}`);
+            schema = applyCustomYupTestsToItem(item, schema, customYupTests);
+        } else if (item.type === 'reference') {
+            const referenceErrorMessage = item.repeats ? t`Select at least one ${fieldName}` : t`Select ${fieldName}`;
+
+            schema = item.required
+                ? yup.array().of(yup.mixed()).min(1, referenceErrorMessage).required(referenceErrorMessage)
+                : yup.mixed().nullable();
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
         } else {
+            const defaultErrorMessage = t`Select at least one ${fieldName}`;
             schema = item.required
-                ? yup
-                      .array()
-                      .of(yup.mixed())
-                      .min(1)
-                      .required(t`${fieldName} is required`)
+                ? yup.array().of(yup.mixed()).min(1, defaultErrorMessage).required(defaultErrorMessage)
                 : yup.mixed().nullable();
             schema = applyCustomYupTestsToItem(item, schema, customYupTests);
         }

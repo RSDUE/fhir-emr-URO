@@ -25,8 +25,7 @@ msgstr ""
 #: src/utils/questionnaire.ts:130
 #: src/utils/questionnaire.ts:135
 #: src/utils/questionnaire.ts:140
-#: src/utils/questionnaire.ts:158
-#: src/utils/questionnaire.ts:163
+#: src/utils/questionnaire.ts:167
 msgid "{fieldName} is required"
 msgstr ""
 
@@ -1392,8 +1391,21 @@ msgstr ""
 msgid "Select (default)"
 msgstr ""
 
+#: src/utils/questionnaire.ts:153
+msgid "Select {fieldName}"
+msgstr ""
+
 #: src/uberComponents/ResourceListPage/BatchActions.tsx:69
 msgid "Select all"
+msgstr ""
+
+#: src/utils/questionnaire.ts:150
+msgid "Select at least one {0}"
+msgstr ""
+
+#: src/utils/questionnaire.ts:153
+#: src/utils/questionnaire.ts:160
+msgid "Select at least one {fieldName}"
 msgstr ""
 
 #: src/components/BaseQuestionnaireResponseForm/widgets/QuestionDateTime.stories.tsx:23
