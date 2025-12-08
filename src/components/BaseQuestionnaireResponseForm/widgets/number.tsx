@@ -18,13 +18,69 @@ export function QuestionInteger({ parentPath, questionItem }: QuestionItemProps)
     const fieldName = [...parentPath, linkId, 0, 'value', 'integer'];
     const { value, onChange, disabled, formItem, placeholder } = useFieldController<number>(fieldName, questionItem);
 
+    console.log('QuestionInteger parameters', questionItem);
+
+    const onPreChange = (value: number | null) => {
+        let isPositiveNumberControl = false;
+        if(questionItem.itemControl != undefined){
+            if((questionItem.itemControl.coding != undefined) && (questionItem.itemControl.coding.length > 0)){
+                if(questionItem.itemControl.coding[0]?.code == 'positive'){
+                    isPositiveNumberControl = true;
+                }
+            }
+        }
+        //console.log('onPreChange number called', value);
+        if(isPositiveNumberControl){
+            if (value === null || value < 0) {
+                onChange(undefined);
+            } else {
+                onChange(value);
+            }
+        }else{
+            onChange(value);
+        }
+    }   
+
     return (
         <Form.Item {...formItem} data-testid={linkId}>
             <InputNumber
                 addonAfter={unit?.display}
                 style={inputStyle}
                 disabled={disabled}
-                onChange={onChange}
+                onChange={onPreChange}
+                value={value}
+                required={required}
+                placeholder={placeholder}
+                parser={(displayValue) => _.toInteger(displayValue)}
+            />
+        </Form.Item>
+    );
+}
+
+export function QuestionPositiveInteger({ parentPath, questionItem }: QuestionItemProps) {
+    const { linkId, required } = questionItem;
+    const { unit } = questionItem as NumericItem;
+    const fieldName = [...parentPath, linkId, 0, 'value', 'integer'];
+    const { value, onChange, disabled, formItem, placeholder } = useFieldController<number>(fieldName, questionItem);
+
+    
+
+    const onPreChange = (value: number | null) => {
+        console.log('onPreChange positive number called', value);
+        if (value === null || value < 0) {
+            onChange(undefined);
+        } else {
+            onChange( Math.abs(Number(value)));
+        }
+    }
+
+    return (
+        <Form.Item {...formItem} data-testid={linkId}>
+            <InputNumber
+                addonAfter={unit?.display}
+                style={inputStyle}
+                disabled={disabled}
+                onChange={onPreChange}
                 value={value}
                 required={required}
                 placeholder={placeholder}
@@ -40,13 +96,36 @@ export function QuestionDecimal({ parentPath, questionItem }: QuestionItemProps)
     const fieldName = [...parentPath, linkId, 0, 'value', 'decimal'];
     const { value, onChange, disabled, formItem, placeholder } = useFieldController<number>(fieldName, questionItem);
 
+    console.log('QuestionDecimal parameters', questionItem);
+
+    const onPreChange = (value: number | null) => {
+        let isPositiveNumberControl = false;
+        if(questionItem.itemControl != undefined){
+            if((questionItem.itemControl.coding != undefined) && (questionItem.itemControl.coding.length > 0)){
+                if(questionItem.itemControl.coding[0]?.code == 'positive'){
+                    isPositiveNumberControl = true;
+                }
+            }
+        }
+        console.log('onPreChange QuestionDecimal called', value);
+        if(isPositiveNumberControl){
+            if (value === null || value < 0) {
+                onChange(0);
+            } else {
+                onChange(Math.abs(Number(value)));
+            }
+        }else{
+            onChange(value);
+        }
+    }   
+
     return (
         <Form.Item {...formItem} data-testid={linkId}>
             <InputNumber
                 addonAfter={unit?.display}
                 style={inputStyle}
                 disabled={disabled}
-                onChange={onChange}
+                onChange={onPreChange}
                 value={value}
                 placeholder={placeholder}
             />
