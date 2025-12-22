@@ -15,6 +15,7 @@ import {
     NavigationActionType,
     CustomActionType,
 } from './types';
+import { Custom } from 'src/styles/styles.style';
 
 export interface WebExtra {
     qrfProps?: Partial<QRFProps>;
@@ -79,9 +80,9 @@ export function HeaderQuestionnaireAction({ action, reload, defaultLaunchContext
         <ModalTrigger
             title={action.title}
             trigger={
-                <Button type="primary" icon={action.icon}>
+                <Custom.ButtonMD type="primary" icon={action.icon}>
                     <span>{action.title}</span>
-                </Button>
+                </Custom.ButtonMD>
             }
             modalProps={action.extra?.modalProps}
         >
@@ -121,9 +122,9 @@ export function BatchQuestionnaireAction<R extends Resource>({
             <ModalTrigger
                 title={action.title}
                 trigger={
-                    <Button type="primary" disabled={disabled} icon={action.icon}>
+                    <Custom.ButtonMD type="primary" disabled={disabled} icon={action.icon}>
                         <span>{action.title}</span>
-                    </Button>
+                    </Custom.ButtonMD>
                 }
                 modalProps={action.extra?.modalProps}
             >
@@ -183,8 +184,8 @@ export function NavigationAction<R extends Resource>({
 export function HeaderNavigationAction<R extends Resource>({ action }: { action: NavigationActionType }) {
     const navigate = useNavigate();
     return (
-        <Button type="primary" icon={action.icon} onClick={() => navigate(action.link)}>
+        <Custom.ButtonMD type="primary" icon={action.icon} onClick={() => navigate(action.link)}>
             <span>{action.title}</span>
-        </Button>
+        </Custom.ButtonMD>
     );
 }
