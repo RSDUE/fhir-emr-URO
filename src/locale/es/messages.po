@@ -1520,7 +1520,7 @@ msgstr "Tipo de sujeto"
 #: src/uberComponents/ResourceListPage/actions.tsx:98
 #: src/uberComponents/ResourceListPage/actions.tsx:147
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Guardar"
 
 #: src/components/QuestionnairesWizard/components/QuestionnairesWizardFooter/index.tsx:45
 #~ msgid "Submit and Go Forward"
@@ -1536,7 +1536,7 @@ msgstr "Enviar"
 #: src/uberComponents/ResourceListPage/actions.tsx:93
 #: src/uberComponents/ResourceListPage/actions.tsx:143
 msgid "Successfully submitted"
-msgstr "Enviado exitosamente"
+msgstr "Guardado exitosamente"
 
 #: src/containers/Scheduling/Availability/index.tsx:43
 msgid "Successfully updated"
