@@ -75,11 +75,11 @@ msgstr "Actividades"
 msgid "Activity"
 msgstr "Actividad"
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
+#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:85
 msgid "Add {text}"
 msgstr "Agregar {text}"
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
+#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:85
 msgid "Add another answer"
 msgstr "Añadir otra respuesta"
 
@@ -1286,6 +1286,9 @@ msgstr "Sábado"
 #: src/containers/QuestionnaireBuilder/QuestionnaireSaveForm/index.tsx:98
 #: src/containers/Scheduling/Availability/index.tsx:73
 #: src/containers/SetPassword/index.tsx:31
+#: src/uberComponents/ResourceListPage/actions.tsx:68
+#: src/uberComponents/ResourceListPage/actions.tsx:103
+#: src/uberComponents/ResourceListPage/actions.tsx:152
 msgid "Save"
 msgstr "Guardar"
 
@@ -1516,9 +1519,6 @@ msgid "Subject Type"
 msgstr "Tipo de sujeto"
 
 #: src/containers/QuestionnaireBuilder/PromptForm.tsx:104
-#: src/uberComponents/ResourceListPage/actions.tsx:63
-#: src/uberComponents/ResourceListPage/actions.tsx:98
-#: src/uberComponents/ResourceListPage/actions.tsx:147
 msgid "Submit"
 msgstr "Guardar"
 
@@ -1532,9 +1532,9 @@ msgstr "Guardar"
 #~ msgid "Successfully saved"
 #~ msgstr "Guardado exitosamente"
 
-#: src/uberComponents/ResourceListPage/actions.tsx:57
-#: src/uberComponents/ResourceListPage/actions.tsx:93
-#: src/uberComponents/ResourceListPage/actions.tsx:143
+#: src/uberComponents/ResourceListPage/actions.tsx:62
+#: src/uberComponents/ResourceListPage/actions.tsx:98
+#: src/uberComponents/ResourceListPage/actions.tsx:148
 msgid "Successfully submitted"
 msgstr "Guardado exitosamente"
 
@@ -1746,3 +1746,6 @@ msgstr "Actualmente no tienes acceso a los datos del paciente. Para obtenerlos, 
 #: src/components/AudioRecorder/index.tsx:105
 msgid "Your browser does not support the audio element"
 msgstr "Tu navegador no sorporta reproducción de audio"
+
+msgid "Open"
+msgstr "Abrir"

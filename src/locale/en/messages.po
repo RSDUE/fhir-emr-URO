@@ -75,11 +75,11 @@ msgstr ""
 msgid "Activity"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
+#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:85
 msgid "Add {text}"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
+#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:85
 msgid "Add another answer"
 msgstr ""
 
@@ -1307,6 +1307,9 @@ msgstr ""
 #: src/containers/QuestionnaireBuilder/QuestionnaireSaveForm/index.tsx:98
 #: src/containers/Scheduling/Availability/index.tsx:73
 #: src/containers/SetPassword/index.tsx:31
+#: src/uberComponents/ResourceListPage/actions.tsx:68
+#: src/uberComponents/ResourceListPage/actions.tsx:103
+#: src/uberComponents/ResourceListPage/actions.tsx:152
 msgid "Save"
 msgstr ""
 
@@ -1545,9 +1548,6 @@ msgid "Subject Type"
 msgstr ""
 
 #: src/containers/QuestionnaireBuilder/PromptForm.tsx:104
-#: src/uberComponents/ResourceListPage/actions.tsx:63
-#: src/uberComponents/ResourceListPage/actions.tsx:98
-#: src/uberComponents/ResourceListPage/actions.tsx:147
 msgid "Submit"
 msgstr ""
 
@@ -1561,9 +1561,9 @@ msgstr ""
 #~ msgid "Successfully saved"
 #~ msgstr ""
 
-#: src/uberComponents/ResourceListPage/actions.tsx:57
-#: src/uberComponents/ResourceListPage/actions.tsx:93
-#: src/uberComponents/ResourceListPage/actions.tsx:143
+#: src/uberComponents/ResourceListPage/actions.tsx:62
+#: src/uberComponents/ResourceListPage/actions.tsx:98
+#: src/uberComponents/ResourceListPage/actions.tsx:148
 msgid "Successfully submitted"
 msgstr ""
 

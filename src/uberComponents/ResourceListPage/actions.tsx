@@ -65,7 +65,7 @@ export function RecordQuestionnaireAction<R extends Resource>({
                         closeModal();
                     }}
                     onCancel={closeModal}
-                    saveButtonTitle={t`Submit`}
+                    saveButtonTitle={t`Save`}
                     {...(action.extra?.qrfProps ?? {})}
                 />
             )}
@@ -100,7 +100,7 @@ export function HeaderQuestionnaireAction({ action, reload, defaultLaunchContext
                     }}
                     launchContextParameters={defaultLaunchContext}
                     onCancel={closeModal}
-                    saveButtonTitle={t`Submit`}
+                    saveButtonTitle={t`Save`}
                     {...(action.extra?.qrfProps ?? {})}
                 />
             )}
@@ -149,7 +149,7 @@ export function BatchQuestionnaireAction<R extends Resource>({
                             reload();
                         }}
                         onCancel={closeModal}
-                        saveButtonTitle={t`Submit`}
+                        saveButtonTitle={t`Save`}
                         {...(action.extra?.qrfProps ? omit(action.extra?.qrfProps, 'launchContextParameters') : {})}
                     />
                 )}

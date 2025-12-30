@@ -1,6 +1,5 @@
 import { DeleteOutlined } from '@ant-design/icons';
 import { t, Trans } from '@lingui/macro';
-import { Button } from 'antd';
 import React from 'react';
 import { GroupItemProps, QuestionItems } from 'sdc-qrf';
 
@@ -8,6 +7,7 @@ import { Title } from 'src/components/Typography';
 
 import { S } from './styles';
 import { RepeatableGroupCard, RepeatableGroups } from '../RepeatableGroups';
+import { Custom } from 'src/styles/styles.style';
 
 interface GroupCardProps extends GroupItemProps {
     variant?: 'main-card' | 'sub-card';
@@ -73,7 +73,7 @@ export function GroupMainCard(props: CardProps) {
             $variant={'main-card'}
             extra={
                 onRemove ? (
-                    <Button
+                    <Custom.ButtonRed
                         type="default"
                         onClick={onRemove}
                         size="middle"
@@ -83,7 +83,7 @@ export function GroupMainCard(props: CardProps) {
                         <span>
                             <Trans>Remove</Trans>
                         </span>
-                    </Button>
+                    </Custom.ButtonRed>
                 ) : null
             }
         >
@@ -102,7 +102,9 @@ export function GroupSubCard(props: CardProps) {
             title={<Title level={5}>{title}</Title>}
             $variant={'sub-card'}
             extra={
-                onRemove ? <Button icon={<DeleteOutlined />} type="default" onClick={onRemove} size="middle" /> : null
+                onRemove ? (
+                    <Custom.ButtonRed icon={<DeleteOutlined />} type="default" onClick={onRemove} size="middle" />
+                ) : null
             }
         >
             <S.GroupContent>{children}</S.GroupContent>
