@@ -1,5 +1,5 @@
 import { t } from '@lingui/macro';
-import { Button, ModalProps, notification } from 'antd';
+import { ModalProps, notification } from 'antd';
 import { Bundle, ParametersParameter, Resource } from 'fhir/r4b';
 import { omit } from 'lodash';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +20,7 @@ import { Custom } from 'src/styles/styles.style';
 export interface WebExtra {
     qrfProps?: Partial<QRFProps>;
     modalProps?: ModalProps;
+    successMessage?: string;
 }
 
 export type QuestionnaireActionType = QAT<WebExtra>;
@@ -59,7 +60,7 @@ export function RecordQuestionnaireAction<R extends Resource>({
                     ]}
                     onSuccess={() => {
                         notification.success({
-                            message: t`Successfully submitted`,
+                            message: action.extra?.successMessage || t`Successfully submitted`,
                         });
                         reload();
                         closeModal();
@@ -80,6 +81,10 @@ interface HeaderQuestionnaireActionProps {
 }
 
 export function HeaderQuestionnaireAction({ action, reload, defaultLaunchContext }: HeaderQuestionnaireActionProps) {
+    console.log('DEBUG: action received in HeaderQuestionnaireAction', action);
+    console.log('DEBUG: action.extra', action.extra);
+    console.log('DEBUG: action.extra?.successMessage', action.extra?.successMessage);
+
     return (
         <ModalTrigger
             title={action.title}
@@ -95,7 +100,7 @@ export function HeaderQuestionnaireAction({ action, reload, defaultLaunchContext
                     questionnaireLoader={questionnaireIdLoader(action.questionnaireId)}
                     onSuccess={() => {
                         closeModal();
-                        notification.success({ message: t`Successfully submitted` });
+                        notification.success({ message: action.extra?.successMessage || t`Successfully submitted` });
                         reload();
                     }}
                     launchContextParameters={defaultLaunchContext}
@@ -145,7 +150,10 @@ export function BatchQuestionnaireAction<R extends Resource>({
                         ]}
                         onSuccess={() => {
                             closeModal();
-                            notification.success({ message: t`Successfully submitted` });
+
+                            notification.success({
+                                message: action.extra?.successMessage || t`Successfully submitted`,
+                            });
                             reload();
                         }}
                         onCancel={closeModal}

@@ -197,6 +197,7 @@ function QuestionReferenceUnsafe<R extends Resource = any, IR extends Resource =
                         isMulti={repeats}
                         placeholder={placeholder}
                         isDisabled={disabled}
+                        noOptionsMessage={() => t`No options`}
                     />
                 </Form.Item>
             )}
