@@ -12,6 +12,7 @@ import { RepeatableGroupCard } from './RepeatableGroupCard';
 import { RepeatableGroupRow } from './RepeatableGroupRow';
 import { S } from './styles';
 import { RepeatableGroupProps } from './types';
+import { Custom } from 'src/styles/styles.style';
 
 export { RepeatableGroupCard, RepeatableGroupRow };
 
@@ -73,10 +74,8 @@ export function RepeatableGroups(props: RepeatableGroupsProps) {
             })}
             {groupItem.questionItem.readOnly ? null : (
                 <S.Footer>
-                    <Button
+                    <Custom.ButtonAutoGreen
                         icon={<PlusOutlined />}
-                        type="primary"
-                        ghost
                         onClick={() => {
                             const updatedInput = { ...value, items: populateValue(items ?? []) };
                             onChange(updatedInput);
@@ -84,7 +83,7 @@ export function RepeatableGroups(props: RepeatableGroupsProps) {
                         size="middle"
                     >
                         <span>{text ? <Trans>Add {text}</Trans> : <Trans>Add another answer</Trans>}</span>
-                    </Button>
+                    </Custom.ButtonAutoGreen>
                 </S.Footer>
             )}
         </S.Group>

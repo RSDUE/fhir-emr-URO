@@ -1,5 +1,5 @@
 import { t } from '@lingui/macro';
-import { Button, ModalProps, notification } from 'antd';
+import { ModalProps, notification } from 'antd';
 import { Bundle, ParametersParameter, Resource } from 'fhir/r4b';
 import { omit } from 'lodash';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +20,7 @@ import { Custom } from 'src/styles/styles.style';
 export interface WebExtra {
     qrfProps?: Partial<QRFProps>;
     modalProps?: ModalProps;
+    successMessage?: string;
 }
 
 export type QuestionnaireActionType = QAT<WebExtra>;
@@ -43,7 +44,11 @@ export function RecordQuestionnaireAction<R extends Resource>({
     return (
         <ModalTrigger
             title={action.title}
-            trigger={<S.LinkButton type="link">{action.title}</S.LinkButton>}
+            trigger={
+                <S.LinkButton style={{ color: '#057e80' }} type="link">
+                    {action.title}
+                </S.LinkButton>
+            }
             modalProps={action.extra?.modalProps}
         >
             {({ closeModal }) => (
@@ -55,13 +60,13 @@ export function RecordQuestionnaireAction<R extends Resource>({
                     ]}
                     onSuccess={() => {
                         notification.success({
-                            message: t`Successfully submitted`,
+                            message: action.extra?.successMessage || t`Successfully submitted`,
                         });
                         reload();
                         closeModal();
                     }}
                     onCancel={closeModal}
-                    saveButtonTitle={t`Submit`}
+                    saveButtonTitle={t`Save`}
                     {...(action.extra?.qrfProps ?? {})}
                 />
             )}
@@ -76,6 +81,10 @@ interface HeaderQuestionnaireActionProps {
 }
 
 export function HeaderQuestionnaireAction({ action, reload, defaultLaunchContext }: HeaderQuestionnaireActionProps) {
+    console.log('DEBUG: action received in HeaderQuestionnaireAction', action);
+    console.log('DEBUG: action.extra', action.extra);
+    console.log('DEBUG: action.extra?.successMessage', action.extra?.successMessage);
+
     return (
         <ModalTrigger
             title={action.title}
@@ -91,12 +100,12 @@ export function HeaderQuestionnaireAction({ action, reload, defaultLaunchContext
                     questionnaireLoader={questionnaireIdLoader(action.questionnaireId)}
                     onSuccess={() => {
                         closeModal();
-                        notification.success({ message: t`Successfully submitted` });
+                        notification.success({ message: action.extra?.successMessage || t`Successfully submitted` });
                         reload();
                     }}
                     launchContextParameters={defaultLaunchContext}
                     onCancel={closeModal}
-                    saveButtonTitle={t`Submit`}
+                    saveButtonTitle={t`Save`}
                     {...(action.extra?.qrfProps ?? {})}
                 />
             )}
@@ -141,11 +150,14 @@ export function BatchQuestionnaireAction<R extends Resource>({
                         ]}
                         onSuccess={() => {
                             closeModal();
-                            notification.success({ message: t`Successfully submitted` });
+
+                            notification.success({
+                                message: action.extra?.successMessage || t`Successfully submitted`,
+                            });
                             reload();
                         }}
                         onCancel={closeModal}
-                        saveButtonTitle={t`Submit`}
+                        saveButtonTitle={t`Save`}
                         {...(action.extra?.qrfProps ? omit(action.extra?.qrfProps, 'launchContextParameters') : {})}
                     />
                 )}
@@ -168,7 +180,7 @@ export function NavigationAction<R extends Resource>({
     return (
         <S.LinkButton
             type="link"
-            style={{ padding: 0 }}
+            style={{ padding: 0, color: '#057e80' }}
             onClick={() =>
                 navigate(action.link, {
                     state: { resource },

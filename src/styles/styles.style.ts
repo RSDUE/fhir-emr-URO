@@ -981,4 +981,34 @@ export const Custom = {
             border: none;
         }
     `,
+    ButtonAutoGreen: styled(Button)`
+        flex: 1;
+        background-color: #5ba694;
+        color: #effefc;
+        box-shadow: none;
+        width: auto;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 6px 8px;
+        border-radius: 16px;
+        gap: 10px;
+        text-wrap: wrap;
+
+        &:not(:disabled):not(.ant-btn-disabled):hover {
+            background-color: #2b5a51;
+            color: #edfcf4;
+            border-color: #057e80;
+        }
+        &:disabled,
+        &.ant-btn-disabled {
+            background-color: #d2f9e3;
+            color: #087450;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: 1px solid #aaf0cd;
+        }
+    `,
 };

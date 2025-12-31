@@ -75,11 +75,11 @@ msgstr "Actividades"
 msgid "Activity"
 msgstr "Actividad"
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
+#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:85
 msgid "Add {text}"
 msgstr "Agregar {text}"
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:86
+#: src/components/BaseQuestionnaireResponseForm/widgets/Group/RepeatableGroups/index.tsx:85
 msgid "Add another answer"
 msgstr "Añadir otra respuesta"
 
@@ -181,7 +181,7 @@ msgstr "Cita añadida con éxito"
 
 #: src/containers/Appointment/PublicAppointment.tsx:53
 msgid "Appointment successfully created"
-msgstr "Agendamiento creado exitosamente"
+msgstr "Agendamiento creado con éxito"
 
 #: src/containers/OrganizationScheduling/index.tsx:173
 #: src/containers/Scheduling/ScheduleCalendar/index.tsx:76
@@ -311,7 +311,7 @@ msgstr "Haz click o arrastra el archivo hasta esta área para cargar"
 
 #: src/containers/PractitionerDetails/PractitionerOverview/index.tsx:92
 msgid "Clinician successfully updated"
-msgstr "Profesional actualizado exitosamente"
+msgstr "Profesional actualizado con éxito"
 
 #: src/containers/PatientDetails/PatientOverviewDynamic/components/PatientNoteListCard/ModalNoteOpen/index.tsx:32
 msgid "Close"
@@ -512,7 +512,7 @@ msgstr "Documentos"
 
 #: src/containers/EncounterDetails/AIScribe/index.tsx:279
 msgid "Documents have been successfully extracted"
-msgstr "Los documentos han sido obtenidos exitosamente"
+msgstr "Los documentos han sido obtenidos con éxito"
 
 #: src/containers/PatientDetails/PatientOverviewDynamic/components/StandardCard/prepare.tsx:237
 #: src/containers/PatientDetails/PatientResources/utils.tsx:64
@@ -544,7 +544,7 @@ msgstr "Clave de borrador no proporcionada"
 
 #: src/containers/PatientDetails/PatientDocumentDetails/index.tsx:55
 msgid "Draft successfully deleted"
-msgstr "Borrador eliminado exitosamente"
+msgstr "Borrador eliminado con éxito"
 
 #: src/hooks/useQuestionnaireResponseDraft.ts:81
 msgid "Draft was successfully loaded from {0}"
@@ -612,7 +612,7 @@ msgstr "Encuentro completado"
 
 #: src/components/ModalNewEncounter/index.tsx:40
 msgid "Encounter successfully created"
-msgstr "Encuentro creado exitosamente"
+msgstr "Encuentro creado con éxito"
 
 #: src/containers/EncounterDetails/index.tsx:194
 msgid "Encounter was successfully completed"
@@ -710,7 +710,7 @@ msgstr "Nombre"
 
 #: src/components/QuestionnaireResponseForm/utils.tsx:109
 msgid "Form successfully saved"
-msgstr "Formulario guardado exitosamente"
+msgstr "Formulario guardado con éxito"
 
 #: src/containers/Scheduling/available-time.ts:17
 msgid "Friday"
@@ -1001,7 +1001,7 @@ msgstr "Sin texto preparado"
 
 #: src/containers/PatientDetails/PatientOverviewDynamic/components/PatientNoteListCard/ModalNoteCreate/index.tsx:44
 msgid "Note successfully created"
-msgstr "Nota creada exitosamente"
+msgstr "Nota creada con éxito"
 
 #: src/containers/PatientDetails/PatientOverviewDynamic/components/PatientNoteListCard/index.tsx:31
 msgid "Notes"
@@ -1286,6 +1286,9 @@ msgstr "Sábado"
 #: src/containers/QuestionnaireBuilder/QuestionnaireSaveForm/index.tsx:98
 #: src/containers/Scheduling/Availability/index.tsx:73
 #: src/containers/SetPassword/index.tsx:31
+#: src/uberComponents/ResourceListPage/actions.tsx:68
+#: src/uberComponents/ResourceListPage/actions.tsx:103
+#: src/uberComponents/ResourceListPage/actions.tsx:152
 msgid "Save"
 msgstr "Guardar"
 
@@ -1516,9 +1519,6 @@ msgid "Subject Type"
 msgstr "Tipo de sujeto"
 
 #: src/containers/QuestionnaireBuilder/PromptForm.tsx:104
-#: src/uberComponents/ResourceListPage/actions.tsx:63
-#: src/uberComponents/ResourceListPage/actions.tsx:98
-#: src/uberComponents/ResourceListPage/actions.tsx:147
 msgid "Submit"
 msgstr "Guardar"
 
@@ -1530,17 +1530,17 @@ msgstr "Guardar"
 #: src/uberComponents/ResourceListPage/actions.tsx:105
 #: src/uberComponents/ResourceListPage/actions.tsx:146
 #~ msgid "Successfully saved"
-#~ msgstr "Guardado exitosamente"
+#~ msgstr "Guardado con éxito"
 
-#: src/uberComponents/ResourceListPage/actions.tsx:57
-#: src/uberComponents/ResourceListPage/actions.tsx:93
-#: src/uberComponents/ResourceListPage/actions.tsx:143
+#: src/uberComponents/ResourceListPage/actions.tsx:62
+#: src/uberComponents/ResourceListPage/actions.tsx:98
+#: src/uberComponents/ResourceListPage/actions.tsx:148
 msgid "Successfully submitted"
-msgstr "Guardado exitosamente"
+msgstr "Guardado con éxito"
 
 #: src/containers/Scheduling/Availability/index.tsx:43
 msgid "Successfully updated"
-msgstr "Actualizado exitosamente"
+msgstr "Actualizado con éxito"
 
 #: src/containers/Scheduling/available-time.ts:19
 msgid "Sunday"
@@ -1581,7 +1581,7 @@ msgstr "El documento no existe"
 
 #: src/containers/PatientDetails/PatientDocumentDetails/index.tsx:79
 msgid "The document successfully amended"
-msgstr "El documento fue modificado exitosamente"
+msgstr "El documento fue modificado con éxito"
 
 #: src/containers/DocumentsList/ChooseDocumentToCreateModal/index.tsx:73
 msgid "The link was copied to clipboard"
@@ -1746,3 +1746,6 @@ msgstr "Actualmente no tienes acceso a los datos del paciente. Para obtenerlos, 
 #: src/components/AudioRecorder/index.tsx:105
 msgid "Your browser does not support the audio element"
 msgstr "Tu navegador no sorporta reproducción de audio"
+
+msgid "Open"
+msgstr "Abrir"
